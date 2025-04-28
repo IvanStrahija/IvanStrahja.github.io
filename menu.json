@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Espresso",
+        "category": "coffee",
+        "price": 1.80
+    },
+    {
+        "name": "Cappuccino",
+        "category": "coffee",
+        "price": 2.50
+    },
+    {
+        "name": "Latte Macchiato",
+        "category": "coffee",
+        "price": 2.80
+    },
+    {
+        "name": "Flat White",
+        "category": "coffee",
+        "price": 2.90
+    },
+    {
+        "name": "Mocha",
+        "category": "coffee",
+        "price": 3.20
+    },
+    {
+        "name": "Affogato",
+        "category": "coffee",
+        "price": 3.50
+    },
+    {
+        "name": "Cortado",
+        "category": "coffee",
+        "price": 2.70
+    },
+    {
+        "name": "Beer - Lager",
+        "category": "alcoholic",
+        "price": 3.00
+    },
+    {
+        "name": "Whiskey Shot",
+        "category": "alcoholic",
+        "price": 4.50
+    },
+    {
+        "name": "Red Wine Glass",
+        "category": "alcoholic",
+        "price": 3.80
+    },
+    {
+        "name": "Gin & Tonic",
+        "category": "alcoholic",
+        "price": 5.50
+    },
+    {
+        "name": "Mojito",
+        "category": "alcoholic",
+        "price": 6.00
+    },
+    {
+        "name": "Martini",
+        "category": "alcoholic",
+        "price": 7.00
+    },
+    {
+        "name": "Pina Colada",
+        "category": "alcoholic",
+        "price": 6.50
+    },
+    {
+        "name": "Mineral Water",
+        "category": "non-alcoholic",
+        "price": 1.50
+    },
+    {
+        "name": "Orange Juice",
+        "category": "non-alcoholic",
+        "price": 2.20
+    },
+    {
+        "name": "Iced Tea",
+        "category": "non-alcoholic",
+        "price": 2.00
+    },
+    {
+        "name": "Lemonade",
+        "category": "non-alcoholic",
+        "price": 2.40
+    },
+    {
+        "name": "Coconut Water",
+        "category": "non-alcoholic",
+        "price": 3.00
+    },
+    {
+        "name": "Apple Juice",
+        "category": "non-alcoholic",
+        "price": 2.50
+    },
+    {
+        "name": "Fruit Smoothie",
+        "category": "non-alcoholic",
+        "price": 3.50
+    },
+    {
+        "name": "Fruit Smoothie",
+        "category": "test",
+        "price": 3.50
+    }
+]
