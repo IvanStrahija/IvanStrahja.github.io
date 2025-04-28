@@ -28,9 +28,9 @@
             "coffee": [],
             "alcoholic": [],
             "non-alcoholic": [],
-            "test":[],
-            "test2":[],
-            "test3":[]
+            "test": [],
+            "test2": [],
+            "test3": []
         };
 
         // Group items into categories
@@ -46,6 +46,7 @@
         for (const [category, items] of Object.entries(categories)) {
             const section = document.createElement('section');
             section.classList.add('menu-category'); // Add class for styling
+            section.classList.add('expanded'); // Expand category by default
 
             const heading = document.createElement('h2');
             heading.textContent = formatCategoryName(category);
@@ -54,17 +55,17 @@
             // Add an arrow next to the category name
             const arrow = document.createElement('span');
             arrow.classList.add('arrow');
-            arrow.innerHTML = '&#x25BC;'; // Downward triangle character
+            arrow.innerHTML = '&#x25B2;'; // Upward triangle character (since it's expanded by default)
             heading.appendChild(arrow); // Add the arrow to the heading
 
             heading.addEventListener('click', () => {
-                toggleCategory(section); // Toggle category on click
+                toggleCategory(section, arrow); // Toggle category on click
             });
 
             section.appendChild(heading);
 
             const list = document.createElement('ul');
-            list.className = 'menu-list';
+            list.className = 'menu-list expanded'; // Add 'expanded' class by default (show items)
 
             items.forEach((item, index) => {
                 const listItem = document.createElement('li');
@@ -100,11 +101,18 @@ function formatCategoryName(category) {
     return category.charAt(0).toUpperCase() + category.slice(1);
 }
 
-function toggleCategory(section) {
+function toggleCategory(section, arrow) {
     const list = section.querySelector('.menu-list');
     // Toggle 'expanded' class to show or hide the list
     section.classList.toggle('expanded');  // Expand/Collapse the section
     list.classList.toggle('expanded'); // Expand/Collapse the menu list
+
+    // Toggle the arrow direction
+    if (list.classList.contains('expanded')) {
+        arrow.innerHTML = '&#x25B2;';  // Upward arrow (expanded)
+    } else {
+        arrow.innerHTML = '&#x25BC;';  // Downward arrow (collapsed)
+    }
 }
 
 loadMenu();
