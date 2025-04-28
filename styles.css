@@ -108,7 +108,7 @@ section.expanded h2 .arrow {
 .menu-list li:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background: #f0f0f0;
+    background: #8e5252;
 }
 
 @keyframes fadeInUp {
