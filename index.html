@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caffe Bar Pricelist</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/x-icon"> <!-- .ico file -->
 </head>
 <body>
     <header>
@@ -25,12 +26,12 @@
         const menu = await response.json();
 
         const categories = {
-            "coffee": [],
-            "alcoholic": [],
+            "Topli napitci": [],
             "non-alcoholic": [],
-            "test": [],
-            "test2": [],
-            "test3": []
+            "pivo": [],  
+            "vino": [],
+            "zestoko": [],
+            "koktel": []
         };
 
         // Group items into categories
@@ -95,9 +96,12 @@
 }
 
 function formatCategoryName(category) {
-    if (category === "coffee") return "Coffee";
-    if (category === "alcoholic") return "Alcoholic Drinks";
-    if (category === "non-alcoholic") return "Non-Alcoholic Drinks";
+    if (category === "Topli napitci") return "Topli napitci";
+    if (category === "non-alcoholic") return "Bezalkoholna pića";
+    if (category === "pivo") return "Pivo";  
+    if (category === "vino") return "Vino";
+    if (category === "zestoko") return "Žestoka pića";
+    if (category === "koktel") return "Kokteli";
     return category.charAt(0).toUpperCase() + category.slice(1);
 }
 
@@ -111,7 +115,7 @@ function toggleCategory(section, arrow) {
     if (list.classList.contains('expanded')) {
         arrow.innerHTML = '&#x25B2;';  // Upward arrow (expanded)
     } else {
-        arrow.innerHTML = '&#x25BC;';  // Downward arrow (collapsed)
+        arrow.innerHTML = '&#x25B2;';  // Downward arrow (collapsed)
     }
 }
 
