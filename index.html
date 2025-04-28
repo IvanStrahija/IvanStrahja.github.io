@@ -1,26 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Beverage Menu</title>
-    <link rel="stylesheet" href="menu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffe Bar Pricelist</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="menu-container">
-        <h1>Beverage Menu</h1>
-        <ul class="menu-list">
-            <li><span class="item">Espresso</span><span class="price">$2.50</span></li>
-            <li><span class="item">Cappuccino</span><span class="price">$3.00</span></li>
-            <li><span class="item">Latte</span><span class="price">$3.50</span></li>
-            <li><span class="item">Americano</span><span class="price">$2.75</span></li>
-            <li><span class="item">Mocha</span><span class="price">$3.75</span></li>
-            <li><span class="item">Hot Chocolate</span><span class="price">$2.95</span></li>
-            <li><span class="item">Chai Latte</span><span class="price">$3.25</span></li>
-            <li><span class="item">Iced Coffee</span><span class="price">$2.85</span></li>
-            <li><span class="item">Smoothie</span><span class="price">$4.00</span></li>
-            <li><span class="item">Green Tea</span><span class="price">$2.45</span></li>
-        </ul>
-    </div>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Caffe Bar Logo" class="logo">
+            <h1>Caffe Bar Bliss</h1>
+        </div>
+    </header>
+
+    <main id="menu">
+        <!-- Menu sections will be dynamically loaded here -->
+    </main>
+
+    <script>
+        async function loadMenu() {
+    try {
+        const response = await fetch('menu.json');
+        const menu = await response.json();
+
+        const categories = {
+            "coffee": [],
+            "alcoholic": [],
+            "non-alcoholic": [],
+            "test":[],
+            "test2":[],
+            "test3":[]
+        };
+
+        // Group items into categories
+        menu.forEach(item => {
+            if (categories[item.category]) {
+                categories[item.category].push(item);
+            }
+        });
+
+        const menuContainer = document.getElementById('menu');
+
+        // For each category create section
+        for (const [category, items] of Object.entries(categories)) {
+            const section = document.createElement('section');
+            section.classList.add('menu-category'); // Add class for styling
+
+            const heading = document.createElement('h2');
+            heading.textContent = formatCategoryName(category);
+            heading.classList.add('category-heading'); // Add class for styling
+
+            // Add an arrow next to the category name
+            const arrow = document.createElement('span');
+            arrow.classList.add('arrow');
+            arrow.innerHTML = '&#x25BC;'; // Downward triangle character
+            heading.appendChild(arrow); // Add the arrow to the heading
+
+            heading.addEventListener('click', () => {
+                toggleCategory(section); // Toggle category on click
+            });
+
+            section.appendChild(heading);
+
+            const list = document.createElement('ul');
+            list.className = 'menu-list';
+
+            items.forEach((item, index) => {
+                const listItem = document.createElement('li');
+
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = item.name;
+
+                const priceSpan = document.createElement('span');
+                priceSpan.textContent = `€${item.price.toFixed(2)}`;
+
+                listItem.appendChild(nameSpan);
+                listItem.appendChild(priceSpan);
+
+                // Add staggered animation delay
+                listItem.style.animationDelay = `${index * 0.1}s`;
+
+                list.appendChild(listItem);
+            });
+
+            section.appendChild(list);
+            menuContainer.appendChild(section);
+        }
+
+    } catch (error) {
+        console.error('Failed to load menu:', error);
+    }
+}
+
+function formatCategoryName(category) {
+    if (category === "coffee") return "Coffee";
+    if (category === "alcoholic") return "Alcoholic Drinks";
+    if (category === "non-alcoholic") return "Non-Alcoholic Drinks";
+    return category.charAt(0).toUpperCase() + category.slice(1);
+}
+
+function toggleCategory(section) {
+    const list = section.querySelector('.menu-list');
+    // Toggle 'expanded' class to show or hide the list
+    section.classList.toggle('expanded');  // Expand/Collapse the section
+    list.classList.toggle('expanded'); // Expand/Collapse the menu list
+}
+
+loadMenu();
+    </script>
 </body>
 </html>
