@@ -1,112 +1,282 @@
 [
     {
         "name": "Espresso",
-        "category": "coffee",
-        "price": 1.80
+        "category": "Topli napitci",
+        "price": 1.60
     },
     {
         "name": "Cappuccino",
-        "category": "coffee",
+        "category": "Topli napitci",
+        "price": 2.20
+    },
+    {
+        "name": "Kava s mlijekom",
+        "category": "Topli napitci",
+        "price": 2.20
+    },
+    {
+        "name": "Bijela kava",
+        "category": "Topli napitci",
         "price": 2.50
     },
     {
-        "name": "Latte Macchiato",
-        "category": "coffee",
-        "price": 2.80
+        "name": "Kava bez kofeina",
+        "category": "Topli napitci",
+        "price": 2.20
     },
     {
-        "name": "Flat White",
-        "category": "coffee",
-        "price": 2.90
+        "name": "Nescafe",
+        "category": "Topli napitci",
+        "price": 2.50
     },
     {
-        "name": "Mocha",
-        "category": "coffee",
-        "price": 3.20
-    },
-    {
-        "name": "Affogato",
-        "category": "coffee",
-        "price": 3.50
-    },
-    {
-        "name": "Cortado",
-        "category": "coffee",
+        "name": "Čaj",
+        "category": "Topli napitci",
         "price": 2.70
     },
     {
-        "name": "Beer - Lager",
-        "category": "alcoholic",
-        "price": 3.00
+        "name": "Kava sa šlagom",
+        "category": "Topli napitci",
+        "price": 2.70
     },
     {
-        "name": "Whiskey Shot",
-        "category": "alcoholic",
-        "price": 4.50
+        "name": "Vruća čokolada",
+        "category": "Topli napitci",
+        "price": 2.70
     },
     {
-        "name": "Red Wine Glass",
-        "category": "alcoholic",
+        "name": "Kakao sa šlagom",
+        "category": "Topli napitci",
+        "price": 2.70
+    },
+    {
+        "name": "Heineken 0.33",
+        "category": "pivo",
+        "price": 2.50
+    },
+    {
+        "name": "Heineken 0.5",
+        "category": "pivo",
+        "price": 3.10
+    },
+    {
+        "name": "Leffe Brown 0.33",
+        "category": "pivo",
+        "price": 3.50
+    },
+    {
+        "name": "Leffe Blonde 0.33",
+        "category": "pivo",
+        "price": 3.50
+    },
+    {
+        "name": "San Servolo",
+        "category": "pivo",
+        "price": 3.50
+    },
+    {
+        "name": "Zeppelin Marmum",
+        "category": "pivo",
+        "price": 4.00
+    },
+    {
+        "name": "Zeppelin Merkat",
+        "category": "pivo",
         "price": 3.80
     },
     {
-        "name": "Gin & Tonic",
-        "category": "alcoholic",
-        "price": 5.50
+        "name": "Zeppelin točeni Pilss 0.5",
+        "category": "pivo",
+        "price": 4.50
     },
     {
-        "name": "Mojito",
-        "category": "alcoholic",
-        "price": 6.00
+        "name": "Zeppelin točeni Pilss 0.33",
+        "category": "pivo",
+        "price": 3.50
     },
     {
-        "name": "Martini",
-        "category": "alcoholic",
-        "price": 7.00
-    },
-    {
-        "name": "Pina Colada",
-        "category": "alcoholic",
-        "price": 6.50
-    },
-    {
-        "name": "Mineral Water",
+        "name": "Coca Cola",
         "category": "non-alcoholic",
         "price": 1.50
     },
     {
-        "name": "Orange Juice",
+        "name": "Coca Cola Zero",
+        "category": "non-alcoholic",
+        "price": 1.50
+    },
+    {
+        "name": "Cedevita",
         "category": "non-alcoholic",
         "price": 2.20
     },
     {
-        "name": "Iced Tea",
+        "name": "Ledeni čaj",
         "category": "non-alcoholic",
         "price": 2.00
     },
     {
-        "name": "Lemonade",
+        "name": "Pipi",
         "category": "non-alcoholic",
         "price": 2.40
     },
     {
-        "name": "Coconut Water",
+        "name": "Red Bull",
         "category": "non-alcoholic",
         "price": 3.00
     },
     {
-        "name": "Apple Juice",
+        "name": "Cockta",
         "category": "non-alcoholic",
         "price": 2.50
     },
     {
-        "name": "Fruit Smoothie",
+        "name": "Sprite",
         "category": "non-alcoholic",
         "price": 3.50
     },
     {
-        "name": "Fruit Smoothie",
-        "category": "test",
+        "name": "Fanta",
+        "category": "non-alcoholic",
         "price": 3.50
+    },
+    {
+        "name": "Orangina",
+        "category": "non-alcoholic",
+        "price": 3.50
+    },
+    {
+        "name": "Limunada, med, menta",
+        "category": "non-alcoholic",
+        "price": 3.50
+    },
+    {
+        "name": "Prirodno cijeđeni sok (razni okusi)",
+        "category": "non-alcoholic",
+        "price": 3.50
+    },
+    {
+        "name": "Korlat Cabarnet Sauvignon",
+        "category": "vino",
+        "price": 35.00
+    },
+    {
+        "name": "Royal Hills",
+        "category": "vino",
+        "price": 35.00
+    },
+    {
+        "name": "Tomac Brut Millenium",
+        "category": "vino",
+        "price": 45.00
+    },
+    {
+        "name": "Tomac Rose",
+        "category": "vino",
+        "price": 52.00
+    },
+    {
+        "name": "Villa Sandi",
+        "category": "vino",
+        "price": 22.00
+    },
+    {
+        "name": "Laguna Malvazija",
+        "category": "vino",
+        "price": 42.00
+    },
+    {
+        "name": "Tanqueray London Dry Gin",
+        "category": "zestoko",
+        "price": 3.20
+    },
+    {
+        "name": "Johnnie Walker Red Label",
+        "category": "zestoko",
+        "price": 3.50
+    },
+    {
+        "name": "Johnnie Walker Black Label",
+        "category": "zestoko",
+        "price": 4.20
+    },
+    {
+        "name": "Bulleit Bourbon",
+        "category": "zestoko",
+        "price": 5.00
+    },
+    {
+        "name": "Ron Zacapa 23",
+        "category": "zestoko",
+        "price": 6.20
+    },
+    {
+        "name": "Ron Zacapa Negra",
+        "category": "zestoko",
+        "price": 11.20
+    },
+    {
+        "name": "Aperol",
+        "category": "zestoko",
+        "price": 3.20
+    },
+    {
+        "name": "Campari",
+        "category": "zestoko",
+        "price": 3.20
+    },
+    {
+        "name": "Pelinkovac Antique",
+        "category": "zestoko",
+        "price": 3.50
+    },
+    {
+        "name": "Jagermeister",
+        "category": "zestoko",
+        "price": 3.50
+    },
+    {
+        "name": "Disaronno sour",
+        "category": "koktel",
+        "price": 5.50
+    },
+    {
+        "name": "Zagreb Mule",
+        "category": "koktel",
+        "price": 6.50
+    },
+    {
+        "name": "Last Ward 6",
+        "category": "koktel",
+        "price": 9.50
+    },
+    {
+        "name": "Life in Pink",
+        "category": "koktel",
+        "price": 4.20
+    },
+    {
+        "name": "Spanish Passion",
+        "category": "koktel",
+        "price": 5.80
+    },
+    {
+        "name": "Moscow Mule",
+        "category": "koktel",
+        "price": 5.50
+    },
+    {
+        "name": "Pina Colada",
+        "category": "koktel",
+        "price": 8.50
+    },
+    {
+        "name": "Negroni",
+        "category": "koktel",
+        "price": 6.10
+    },
+    {
+        "name": "Winter Highball",
+        "category": "koktel",
+        "price": 5.90
     }
 ]
