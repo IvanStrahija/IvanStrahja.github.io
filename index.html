@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caffe Bar Pricelist</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="logo.png" type="image/x-icon"> <!-- .ico file -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- .ico file -->
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="logo.png" alt="Caffe Bar Logo" class="logo">
-            <h1>Caffe Bar Bliss</h1>
+            <img src="caffe.png" alt="Caffe Bar Logo" class="logo">
+            <h1>Caffe Bar Sound</h1>
         </div>
     </header>
 
@@ -96,12 +96,12 @@
 }
 
 function formatCategoryName(category) {
-    if (category === "Topli napitci") return "Topli napitci";
-    if (category === "non-alcoholic") return "Bezalkoholna pića";
-    if (category === "pivo") return "Pivo";  
-    if (category === "vino") return "Vino";
-    if (category === "zestoko") return "Žestoka pića";
-    if (category === "koktel") return "Kokteli";
+    if (category === "Topli napitci") return "Topli napitci ☕";
+    if (category === "non-alcoholic") return "Bezalkoholna pića 🥤";
+    if (category === "pivo") return "Pivo 🍺";  
+    if (category === "vino") return "Vino 🍷";
+    if (category === "zestoko") return "Žestoka pića 🥃";
+    if (category === "koktel") return "Kokteli 🍸";
     return category.charAt(0).toUpperCase() + category.slice(1);
 }
 
