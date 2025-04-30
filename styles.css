@@ -72,10 +72,10 @@ h2 {
     transition: transform 0.3s ease; /* Smooth arrow rotation */
 }
 
-/* Rotate arrow when section is expanded */
+/* Rotate arrow when section is expanded 
 section.expanded h2 .arrow {
-    transform: rotate(180deg);
-}
+    transform: rotate(180deg); 
+}*/
 
 .menu-list {
     list-style-type: none;
@@ -97,7 +97,7 @@ section.expanded h2 .arrow {
     font-size: 1.1rem;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards;
+    animation: fadeInUp 0.23s forwards;
     display: flex;
     justify-content: space-between;
     align-items: center;
