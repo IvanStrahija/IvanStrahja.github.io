@@ -1,13 +1,13 @@
 /* Base styles (mobile-first approach) */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    background-color: #54555c;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #6f4e37;
+    background-color: #1e1e21;
     color: white;
     padding: 15px;
     text-align: center;
@@ -32,17 +32,18 @@ h1 {
 
 main {
     padding: 20px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr;
     gap: 15px;
-    background: url('pozadina.jpg') no-repeat center center/cover;
+    background: #54555c;
     min-height: 100vh;
     color: white;
     border-radius: 8px;
 }
 
 section {
-    background: rgba(120, 88, 45, 0.9); /* Increased opacity to make text more readable */
+    background: #26272e; /* Increased opacity to make text more readable */
     padding: 15px;
     border-radius: 10px;
     transition: all 0.3s ease; /* Smooth transition for expanding/collapsing */
@@ -89,12 +90,12 @@ section.expanded h2 .arrow {
 }
 
 .menu-list li {
-    background: #6e3c3c;
+    background: #383b41;
     margin: 8px 0;
     padding: 10px 15px;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.23s forwards;
@@ -108,42 +109,12 @@ section.expanded h2 .arrow {
 .menu-list li:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background: #8e5252;
+    background: #4d4f57;
 }
 
 @keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Mobile Styling for small screens */
-@media (max-width: 600px) {
-    main {
-        padding: 10px;
-        background-position: center top;
-        background-size: cover;
-    }
-
-    section {
-        background: rgba(120, 88, 45, 0.9); /* Increased opacity for mobile */
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    .menu-list li {
-        font-size: 1rem;
-    }
-
-    .logo {
-        width: 35px;
-        height: 35px;
-    }
-
-    h1 {
-        font-size: 1.4rem;
     }
 }
